@@ -1,0 +1,123 @@
+.brand-blue {
+	background-color: #1d215f !important;
+}
+.brand-yellow {
+	background-color: #ffd623;
+}
+.btn.brand-yellow,
+.btn-large.brand-yellow {
+	background-color: #ffd623;
+	color: #333 !important;
+}
+.btn.brand-yellow:hover,
+.btn-large.brand-yellow:hover {
+	background-color: #dab513 !important;
+}
+.brand-green {
+	background-color: #9bb936;
+}
+.brand-yellow-text {
+	color: #ffd623;
+}
+.brand-green-text {
+	color: #9bb936;
+}
+.btn,
+.btn-large {
+	font-weight: 700;
+	border-radius: 13px !important;
+}
+.btn-flat {
+	border: 1px solid #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700; 
+}
+.italic {
+	font-style: italic;
+}
+img {
+	max-width: 100%;
+}
+.section {
+	padding: 80px 0;
+}
+.card .card-content p {
+	font-size: 18px !important;
+	font-weight: 700;
+}
+.brand-logo img {
+	height: 64px;
+}
+/* label color */
+.input-field label {
+	color: #333 !important;
+}
+/* label focus color */
+.input-field input:focus + label {
+	color: #333 !important;
+}
+/* label underline focus color */
+.input-field input:focus {
+	border-bottom: 1px solid #1d215f !important;
+	box-shadow: 0 1px 0 0 #1d215f !important;
+}
+/* valid color */
+.input-field input.valid {
+	border-bottom: 1px solid #1d215f !important;
+	box-shadow: 0 1px 0 0 #1d215f !important;
+}
+/* invalid color */
+.input-field input.invalid {
+	border-bottom: 1px solid #1d215f !important;
+	box-shadow: 0 1px 0 0 #1d215f !important;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+	color: #1d215f !important;
+}
+label {
+	color: #333 !important;
+}
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+	background-color: #1d215f !important;
+}
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+	border-color: #1d215f !important;
+}
+.hoverable {
+	display: block;
+}
+.card-color {
+	height: 150px
+}
+.card-color .card-title {
+	left: 50% !important;
+	transform: translateX(-50%);
+	width: 100%;
+}
+nav .button-collapse {
+	float: right !important;
+}
+#cadastre-se .card-content {
+	padding-bottom: 40px;
+	padding-top: 40px;
+	float: left;
+	width: 100%; 
+}
+.card-action.right {
+	width: 100%;
+}
+@media only screen and (max-width: 480px) {
+	.brand-logo img {
+		height: auto;
+	}
+	h3 {
+		font-size: 2.3rem;
+	}
+}
