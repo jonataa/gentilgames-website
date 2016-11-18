@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Gentil Games</title>
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,900,400italic' rel='stylesheet' type='text/css'>
 	<link href='css/style.css' rel='stylesheet' type='text/css'>
@@ -89,11 +89,12 @@
 					<h3>Treine grátis. Pratique de maneira rápida e obtenha seu certificado.</h3>
 					<p>Desafie seus conhecimentos de forma gratuita. Acesse os conteúdos de sua preferência e obtenha o certificado ao final.</p>
 					<br>
-					<a href="#treinamentos" class="btn-large waves-effect waves-light brand-yellow">Escolha o treinamento</a>
+					<button data-target="modal1" class="btn-large waves-effect waves-light brand-yellow">Escolha o treinamento</button>					
 				</div>
 			</div>
 		</div>
 	</section>
+
 	<section class="section brand-green" id="pra-sua-empresa">
 		<div class="container">
 			<div class="row">
@@ -376,8 +377,21 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4>Treinamentos</h4>
+      <div class="collection" id="courses"></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
