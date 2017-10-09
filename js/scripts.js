@@ -1,3 +1,5 @@
+moment.locale('pt-Br');
+
 $(function() {    
     
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -72,13 +74,13 @@ $("#validar-certificado-btn").click(function() {
     },
     success: function (data) {
       console.log(data);
-      var tpl = '<h5 style="text-align: center">Certificado Válido</h4><p><strong>Nome: </strong>${name}</p><p><strong>CPF: </strong>${cpf}</p><p><strong>Pasaporte: </strong>${passaport}</p><p><strong>Data: </strong>${date}</p>';
+      var tpl = '<h5 style="text-align: center">Certificado Válido</h4><p><strong>Nome: </strong>${name}</p><p><strong>CPF: </strong>${cpf}</p><p><strong>Passaporte: </strong>${passaport}</p><p><strong>Data: </strong>${date}</p>';
 
       var certificateData = {
         name: data.profile.name,
         cpf: data.profile.cpf ? data.profile.cpf : 'Não informado' ,
         passaport: data.profile.passaport ? data.profile.passaport : 'Não informado',
-        date: data._created
+        date: moment(data._created).calendar()
       }
 
       $("#certificado-validado").html('');
