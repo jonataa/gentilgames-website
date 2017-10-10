@@ -1,3 +1,5 @@
+moment.locale('pt-Br');
+
 $(function() {    
     
   $('a[href*="#"]:not([href="#"])').click(function() {
@@ -18,6 +20,20 @@ $(".button-collapse").sideNav({edge: 'right'});
 
 $(document).ready(function() {
   $('.modal').modal();
+
+  $('#validar-certificado').modal({
+    dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      complete: function() { 
+        $("#certificado-validado").html(null);
+        $("#cod-certificado").val("");
+      }
+    }
+  );
 });
 
 $.ajax({
@@ -29,6 +45,7 @@ $.ajax({
     "Authorization": "Basic " + btoa("user:1")
   },
   success: function (data) {
+    console.log(data);
     var tpl = '<a href="${link}" target="_blank" class="collection-item avatar"><i class="material-icons circle blue">trending_up</i><span class="title middle">${title}</span></a>';
     var items = data._items;
     var courses = [];
@@ -44,3 +61,33 @@ $.ajax({
 
   }
 });
+
+$("#validar-certificado-btn").click(function() {
+  var certificateId = $("#cod-certificado").val();
+  $.ajax({
+    type: "GET",
+    url: "http://api.gentilgames.com/v1/certificates/" + certificateId,
+    dataType: 'json',
+    async: false,
+    headers: {
+      "Authorization": "Basic " + btoa("user:1")
+    },
+    success: function (data) {
+      console.log(data);
+      var tpl = '<h5 style="text-align: center">Certificado Válido</h4><p><strong>Nome: </strong>${name}</p><p><strong>CPF: </strong>${cpf}</p><p><strong>Passaporte: </strong>${passaport}</p><p><strong>Data: </strong>${date}</p>';
+
+      var certificateData = {
+        name: data.profile.name,
+        cpf: data.profile.cpf ? data.profile.cpf : 'Não informado' ,
+        passaport: data.profile.passaport ? data.profile.passaport : 'Não informado',
+        date: moment(data._created).calendar()
+      }
+
+      $("#certificado-validado").html('');
+      $.tmpl(tpl, certificateData).appendTo('#certificado-validado');
+    },
+    error: function(req) {
+      $("#certificado-validado").html('<h5 style="color: red; text-align: center">Certificado Inválido</h5>');
+    }
+  });
+})

@@ -151,14 +151,21 @@
 	<section class="section brand-blue" id="certificado">
 		<div class="container">
 			<div class="row">
-				<div class="col m7 push-m5">
+				<div class="col m6 push-m6">
 					<img src="img/b2.png" alt="">
 				</div>
-				<div class="col m5 pull-m7">
+				<div class="col m6 pull-m6">
 					<h3 class="white-text">Conclua o jogo e conquiste seu certificado.</h3>
 					<p class="white-text">Acertando mais de 70% das questões sobre cada assunto, você já pode fazer uma prova e receber seu certificado, que possui autenticação para conferência.</p>
 					<br>
-					<a href="#cadastre-se" class="btn-large waves-effect waves-light brand-yellow">Obtenha certificados</a>
+					<div class="row">
+						<div class="col m6">
+							<a href="#cadastre-se" class="btn-large waves-effect waves-light brand-yellow">Obtenha certificados</a>
+						</div>
+						<div class="col m6">
+							<button data-target="validar-certificado" class="btn-large waves-effect waves-light brand-green modal-trigger">Validar certificado</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -391,9 +398,25 @@
     </div>
   </div>
 
+  <div id="validar-certificado" class="modal">
+    <div class="modal-content">
+      <h4>Validar Certificado</h4>
+      <div class="row">
+      	<div class="col m10">
+      		<input type="text" placeholder="Código de Validação" id="cod-certificado">
+      	</div>
+      	<div class="col m2">
+		    <button id="validar-certificado-btn" class="btn-large waves-effect waves-light brand-green modal-trigger">Validar</button>
+      	</div>
+      </div>
+      <div id="certificado-validado"></div>
+    </div>
+  </div>
+
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<script src="js/moment.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>
