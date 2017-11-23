@@ -121,8 +121,34 @@ nav .button-collapse {
 }
 
 /* HEADER */
+.slick-header-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 20px;
+}
+.headline,
+.header-image {
+	flex-basis: 50%;
+}
 .headline {
 	text-align: center;
+}
+.header-image {
+	display: flex;
+	justify-content: center;
+	margin: 40px 0 0 0;
+}
+.header-image figure {
+	width: 250px;
+	margin: 0;
+}
+.header-image img {
+	width: 100%;
+}
+
+.header-image.with-border figure {
+	border: 5px solid #fff;
 }
 
 @media only screen and (max-width: 480px) {
@@ -141,9 +167,15 @@ nav .button-collapse {
 @media (min-width: 992px) {
 	.container {
         max-width: 960px;
-    }
+	}
+	.slick-header-item {
+		flex-direction: row;
+	}
 	.headline {
 		text-align: left;
+	}
+	.header-image {
+		justify-content: flex-end;
 	}
 }
 
