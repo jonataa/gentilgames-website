@@ -6,13 +6,17 @@
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,900,400italic' rel='stylesheet' type='text/css'>
-	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900,400italic" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- Slick JS -> see doc: https://github.com/kenwheeler/slick/ -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
 	<div class="navbar-fixed">
 		<nav class="brand-blue">
-			<div class="nav-wrapper">
+			<div class="nav-wrapper container">
 				<a href="#!" class="brand-logo"><img src="img/logo-gentil-training.png" alt="Logo Gentil Training"></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="#pra-voce">Estudantes</a></li>
@@ -20,7 +24,7 @@
 					<li><a href="#materiais">Materiais</a></li>
 					<!--li><a href="#treinamentos">Treinamentos</a></li-->
 					<li><a href="#certificado">Certificado</a></li>
-					<li><a href="#precos">Preços</a></li>
+					<!-- <li><a href="#precos">Preços</a></li> -->
 					<li><a href="https://www.facebook.com/gentilgames/?ref=br_rs" target="_blank" class="waves-effect waves-light btn brand-yellow">Contato</a></li>
 				</ul>
 				<ul class="side-nav brand-blue white-text" id="mobile-demo">
@@ -30,7 +34,7 @@
 					<li><a href="#materiais">Materiais</a></li>
 					<!--li><a href="#treinamentos">Treinamentos</a></li-->
 					<li><a href="#certificado">Certificado</a></li>
-					<li><a href="#precos">Preços</a></li>
+					<!-- <li><a href="#precos">Preços</a></li> -->
 				</ul>
 				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 			</div>
@@ -38,19 +42,17 @@
 	</div>
 	<div class="section brand-blue">
 		<div class="container">
-			<br><br>
-
-			<div class="row center">
-				<h1 class="header center white-text">A solução para quem precisa estar atualizado</h1>
-				<p class="header col s12 white-text flow-text">A Contabilidade de um jeito que você nunca viu: prática e dinâmica.</p>
+			<div class="slick-header">
+				<div class="slick-header-item">
+					<div class="headline">
+						<h1 class="header white-text">Confira novos jogos disponíveis</h1>
+						<p class="header col s12 white-text flow-text">A Contabilidade de um jeito que você nunca viu: prática e dinâmica.</p>
+						<button data-target="modal1" class="btn-large waves-effect waves-light brand-yellow">Escolha o treinamento</button>
+					</div>
+				</div>
+				<div>your content</div>
+				<div>your content</div>
 			</div>
-			<div class="row center">
-				<button data-target="modal1" class="btn-large waves-effect waves-light brand-yellow">Escolha o treinamento</button>
-				<!-- <a href="#" id="download-button" class="btn-large waves-effect waves-light brand-yellow">Pra você</a>
-				<a href="#" id="download-button" class="btn-flat btn-large waves-effect waves-light white-text">Pra sua empresa</a> -->
-			</div>
-			<br><br>
-
 		</div>
 	</div>
 	<section class="section">
@@ -215,7 +217,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="section" id="precos">
+	<!-- <section class="section" id="precos">
 		<div class="container">
 			<div class="row center">
 				<div class="col s12">
@@ -260,7 +262,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<section class="section brand-yellow" id="cadastre-se">
 		<div class="container">
 			<div class="row">
@@ -416,6 +418,9 @@
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
 	<script src="js/moment.js"></script>
 	<script src="js/scripts.js"></script>
 </body>

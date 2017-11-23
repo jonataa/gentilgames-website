@@ -1,3 +1,6 @@
+.navbar-fixed {
+	z-index: 996;
+}
 .brand-blue {
 	background-color: #1d215f !important;
 }
@@ -104,6 +107,9 @@ label {
 nav .button-collapse {
 	float: right !important;
 }
+.side-nav li a {
+	color: #ffffff;
+}
 #cadastre-se .card-content {
 	padding-bottom: 40px;
 	padding-top: 40px;
@@ -113,6 +119,12 @@ nav .button-collapse {
 .card-action.right {
 	width: 100%;
 }
+
+/* HEADER */
+.headline {
+	text-align: center;
+}
+
 @media only screen and (max-width: 480px) {
 	.brand-logo img {
 		height: auto;
@@ -120,4 +132,24 @@ nav .button-collapse {
 	h3 {
 		font-size: 2.3rem;
 	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.container {
+        max-width: 960px;
+    }
+	.headline {
+		text-align: left;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.container {
+        max-width: 1140px;
+    }
 }
