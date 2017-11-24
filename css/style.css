@@ -205,9 +205,6 @@ nav .button-collapse {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-	h1 {
-		font-size: 4.2rem;
-	}
 	.container {
         max-width: 960px;
 	}
