@@ -151,6 +151,32 @@ nav .button-collapse {
 	border: 5px solid #fff;
 }
 
+.slick-prev:before, .slick-next:before  {
+	color: #1d215f !important;
+}
+
+.course-list .course-item {
+	height: 300px;
+	margin: 0 5px;
+	color: #ffffff;
+	background-color: #1d215f;
+}
+
+.course-list .course-item a {
+	color: #ffffff;
+}
+
+.course-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
 @media only screen and (max-width: 480px) {
 	.brand-logo img {
 		height: auto;

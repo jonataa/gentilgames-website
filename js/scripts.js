@@ -54,7 +54,7 @@ $.ajax({
   },
   success: function (data) {
     console.log(data);
-    var tpl = '<a href="${link}" target="_blank" class="collection-item avatar"><i class="material-icons circle blue">trending_up</i><span class="title middle">${title}</span></a>';
+    var tpl = '<li class="course-item"><a href="${link}" target="_blank"><div class="course-content">${title}</div></a></li>';
     var items = data._items;
     var courses = [];
 
@@ -66,6 +66,29 @@ $.ajax({
 
       $.tmpl(tpl, course).appendTo('#courses');  
     });      
+
+    $('.course-list').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      responsive: [{
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }]
+    });
 
   }
 });
