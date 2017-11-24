@@ -211,8 +211,14 @@ nav .button-collapse {
 	.slick-header-item {
 		flex-direction: row;
 	}
+	.slick-header-item.center {
+		flex-direction: column;
+	}
 	.headline {
 		text-align: left;
+	}
+	.slick-header-item.center .headline {
+		text-align: center;
 	}
 	.header-image {
 		justify-content: flex-end;
