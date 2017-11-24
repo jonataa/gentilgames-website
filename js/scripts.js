@@ -64,7 +64,7 @@ $.ajax({
         link: 'http://app.gentilgames.com/#/home/' + item._id
       };
 
-      $.tmpl(tpl, course).appendTo('#courses');  
+      $.tmpl(tpl, course).appendTo('#games');  
     });      
 
     $('.course-list').slick({
