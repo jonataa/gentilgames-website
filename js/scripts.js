@@ -4,7 +4,7 @@ $(function() {
   
   $('.slick-header').slick({
     dots: true,
-    infinite: false,
+    infinite: true,
     fade: true,
     autoplay: true,
     autoplaySpeed: 10000,
