@@ -151,8 +151,19 @@ nav .button-collapse {
 	border: 5px solid #fff;
 }
 
-.slick-prev:before, .slick-next:before  {
+.slick-header .slick-dots li.slick-active button:before, 
+.slick-header .slick-dots li button:before {
+	color: #ffffff !important;
+}
+
+#games .slick-prev:before, 
+#games .slick-next:before  {
 	color: #1d215f !important;
+}
+
+.courses-section {
+	padding-left: 20px; 
+	padding-right: 20px; 
 }
 
 .course-list .course-item {
