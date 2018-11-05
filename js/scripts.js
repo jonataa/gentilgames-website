@@ -61,7 +61,7 @@ $.ajax({
     items.forEach(function (item) {
       var course = {
         title: item.title.pt_br || item.title.en,
-        link: 'http://app.gentilgames.com/#/home/' + item._id
+        link: 'http://web.gentilgames.com/#/home/' + item._id
       };
 
       $.tmpl(tpl, course).appendTo('#games');  
